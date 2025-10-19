@@ -67,42 +67,44 @@ footer{
 }
 
 .smol {
-  /* 1. Apply the rainbow gradient background to the entire .smol container */
-  background-image: linear-gradient(
-    to right,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
-  
-  /* 2. Give it some height so the rainbow is visible */
-  min-height: 150px; /* Adjust as needed */
-  
-  /* 3. Center the content (your h1) both horizontally and vertically */
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Centers vertically */
-  
-  /* Optional: Add some padding to the top/bottom if needed */
-  /* padding: 20px 0; */
+    /* 1. APPLY THE FULL RAINBOW BACKGROUND */
+    background-image: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+    
+    /* 2. ENSURE THE BACKGROUND HAS VISIBLE HEIGHT */
+    min-height: 150px; /* Make sure this is a large enough value */
+    
+    /* 3. CENTER THE TEXT HORIZONTALLY AND VERTICALLY */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    
+    /* Ensure the container takes full width of its parent */
+    width: 100%; 
+    padding: 0; /* Remove padding if you want rainbow right up to the edges */
 }
 
 .smol h1 {
-  /* 1. Set the text color to red */
-  color: red; 
-  
-  /* 2. Reset any previous text-fill/background-clip if they were applied */
-  -webkit-background-clip: unset; 
-  background-clip: unset;
-  -webkit-text-fill-color: initial; 
-  text-fill-color: initial;
-  
-  /* Optional: Adjust font size for impact */
-  font-size: 3rem; /* Example size, adjust as desired */
-  font-weight: bold;
-  margin: 0; /* Remove default h1 margin to help with centering */
+    /* 1. SET THE TEXT COLOR TO PURE RED */
+    color: red; 
+    
+    /* 2. REMOVE (OVERRIDE) THE RAINBOW TEXT EFFECT STYLES */
+    /* This is critical to stop the text itself from changing color */
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+    text-fill-color: initial;
+
+    /* 3. ADJUST FONT AND REMOVE MARGINS */
+    font-size: 3rem; 
+    font-weight: 900;
+    margin: 0; /* Important for perfect vertical centering */
 }
