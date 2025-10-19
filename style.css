@@ -66,30 +66,43 @@ footer{
     text-align: center;
 }
 
-.smol h1{
-  color: red; 
-  
+.smol {
+  /* 1. Apply the rainbow gradient background to the entire .smol container */
   background-image: linear-gradient(
-    to right, 
-    red, 
-    orange, 
-    yellow, 
-    green, 
-    blue, 
-    indigo, 
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
     violet
   );
   
-  /* 3. Use vendor prefixes to clip the gradient background to the text shape */
-  -webkit-background-clip: text; /* For Chrome, Safari, etc. */
-  background-clip: text;
+  /* 2. Give it some height so the rainbow is visible */
+  min-height: 150px; /* Adjust as needed */
   
-  /* 4. Make the text transparent so the background gradient shows through */
-  -webkit-text-fill-color: transparent; /* For Chrome, Safari, etc. */
-  text-fill-color: transparent; 
+  /* 3. Center the content (your h1) both horizontally and vertically */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
   
-  /* Optional: Ensure the h1 is large enough for the effect to show well */
-  font-size: 4rem; 
-  font-weight: 900;
-  display: inline-block; /* Helps ensure the background clip works correctly */
+  /* Optional: Add some padding to the top/bottom if needed */
+  /* padding: 20px 0; */
+}
+
+.smol h1 {
+  /* 1. Set the text color to red */
+  color: red; 
+  
+  /* 2. Reset any previous text-fill/background-clip if they were applied */
+  -webkit-background-clip: unset; 
+  background-clip: unset;
+  -webkit-text-fill-color: initial; 
+  text-fill-color: initial;
+  
+  /* Optional: Adjust font size for impact */
+  font-size: 3rem; /* Example size, adjust as desired */
+  font-weight: bold;
+  margin: 0; /* Remove default h1 margin to help with centering */
 }
