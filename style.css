@@ -94,7 +94,7 @@ footer{
 
 .smol h1 {
     /* 1. FORCE THE TEXT COLOR TO RED */
-    color: red !important; 
+    color: black !important; 
     
     /* 2. CRITICALLY REMOVE (OVERRIDE) THE RAINBOW TEXT EFFECT STYLES */
     -webkit-background-clip: initial !important;
