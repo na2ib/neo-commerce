@@ -67,44 +67,43 @@ footer{
 }
 
 .smol {
-    /* 1. APPLY THE FULL RAINBOW BACKGROUND */
+    /* 1. FORCE THE FULL RAINBOW BACKGROUND */
     background-image: linear-gradient(
         to right,
-        red,
-        orange,
-        yellow,
-        green,
-        blue,
-        indigo,
-        violet
-    );
+        #ff0000, /* Red */
+        #ff7f00, /* Orange */
+        #ffff00, /* Yellow */
+        #00ff00, /* Green */
+        #0000ff, /* Blue */
+        #4b0082, /* Indigo */
+        #9400d3  /* Violet */
+    ) !important;
     
     /* 2. ENSURE THE BACKGROUND HAS VISIBLE HEIGHT */
-    min-height: 150px; /* Make sure this is a large enough value */
+    min-height: 150px !important; 
     
     /* 3. CENTER THE TEXT HORIZONTALLY AND VERTICALLY */
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;     
     
-    /* Ensure the container takes full width of its parent */
-    width: 100%; 
-    padding: 0; /* Remove padding if you want rainbow right up to the edges */
+    /* Ensure the container takes full width if you are using container-fluid */
+    width: 100% !important; 
+    padding: 0 !important; 
 }
 
 .smol h1 {
-    /* 1. SET THE TEXT COLOR TO PURE RED */
-    color: red; 
+    /* 1. FORCE THE TEXT COLOR TO RED */
+    color: red !important; 
     
-    /* 2. REMOVE (OVERRIDE) THE RAINBOW TEXT EFFECT STYLES */
-    /* This is critical to stop the text itself from changing color */
-    -webkit-background-clip: initial;
-    background-clip: initial;
-    -webkit-text-fill-color: initial;
-    text-fill-color: initial;
+    /* 2. CRITICALLY REMOVE (OVERRIDE) THE RAINBOW TEXT EFFECT STYLES */
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    text-fill-color: initial !important;
 
-    /* 3. ADJUST FONT AND REMOVE MARGINS */
-    font-size: 3rem; 
-    font-weight: 900;
-    margin: 0; /* Important for perfect vertical centering */
+    /* 3. ADJUST FONT AND MARGINS */
+    font-size: 3rem !important; 
+    font-weight: 900 !important;
+    margin: 0 !important; 
 }
