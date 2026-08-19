@@ -3,210 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neo Commerce</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Neo Commerce | Aurora Premium</title>
+    <meta name="description" content="Discover premium sports tech, backpacks, and exclusive sneakers at Neo Commerce.">
+    
+    <!-- Premium Fonts: Poppins for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="images/logo.png" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#shoes">Shoes</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#backpack">Backpack</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#subscribe">Subscribe</a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div class="container">
-        <div id="carouselExampleAutoplaying" class="carousel slide orange-bg" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row align-items-center">
-                    <div class="col-md-7">
-                        <h1>Mega LCD TV For Sports</h1>
-                        <p>This is the best TV in the world, no other TV can beat it in giving the best experience.</p>
-                        <h1 class="price">$1200</h1>
-                        <button class="buy-now-button">Buy Now</button>
-                    </div>
-                    <div class="col-md-5">
-                        <img src="images/banner-images/tv.png" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="row align-items-center">
-                    <div class="col-md-7">
-                        <h1>E-sports Headphone</h1>
-                        <p>This is the best headphone in the world, no other headphone can beat it in giving the best experience.</p>
-                        <h1 class="price">$1200</h1>
-                        <button class="buy-now-button">Buy Now</button>
-                    </div>
-                    <div class="col-md-5">
-                        <img src="images/banner-images/headphone.png" class="d-block w-100" alt="...">
-                    </div>
+    <!-- Glassmorphic Header & Navigation -->
+    <header class="header">
+        <div class="container navbar">
+            <a class="brand" href="#home" aria-label="Neo Commerce Home">
+                <span class="logo-text">Neo<span class="text-accent">Commerce</span></span>
+            </a>
+            
+            <!-- Mobile Menu Toggle (Pure CSS) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="nav-icon"></span>
+            </label>
+            
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#shoes" class="nav-link">Shoes</a>
+                <a href="#backpacks" class="nav-link">Backpacks</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Interactive Auto-Rotating Hero Section -->
+        <section id="home" class="hero section-padding">
+            <div class="container animate-reveal" style="--delay: 100ms;">
+                <div class="carousel-container" id="hero-carousel">
                     
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="row align-items-center">
-                    <div class="col-md-7">
-                        <h1>X-box 360 handheld</h1>
-                        <p>This is the best console in the world, no other console can beat it in giving the best experience.</p>
-                        <h1 class="price">$1200</h1>
-                        <button class="buy-now-button">Buy Now</button>
+                    <div class="carousel-track">
+                        <!-- Slide 1 -->
+                        <div class="hero-slide">
+                            <div class="hero-text">
+                                <h1 class="hero-title">Mega LCD TV <br><span class="text-gradient">For Sports</span></h1>
+                                <p class="hero-description">Experience unmatched clarity and vibrant colors. The ultimate centerpiece for your entertainment setup.</p>
+                                <p class="hero-price">$1200</p>
+                                <button type="button" class="btn btn-primary">Discover Now</button>
+                            </div>
+                            <div class="hero-image">
+                                <img src="images/banner-images/tv.png" alt="Mega LCD TV showing a sports match" width="500" height="400">
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="hero-slide">
+                            <div class="hero-text">
+                                <h1 class="hero-title">E-sports <br><span class="text-gradient">Headphone</span></h1>
+                                <p class="hero-description">Immersive spatial audio designed for competitive gaming. Hear every detail with absolute precision.</p>
+                                <p class="hero-price">$250</p>
+                                <button type="button" class="btn btn-primary">Discover Now</button>
+                            </div>
+                            <div class="hero-image">
+                                <img src="images/banner-images/headphone.png" alt="High-quality E-sports Headphone" width="500" height="400">
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="hero-slide">
+                            <div class="hero-text">
+                                <h1 class="hero-title">X-box 360 <br><span class="text-gradient">Handheld</span></h1>
+                                <p class="hero-description">Take your favorite console games anywhere. Uncompromised performance in the palm of your hand.</p>
+                                <p class="hero-price">$299</p>
+                                <button type="button" class="btn btn-primary">Discover Now</button>
+                            </div>
+                            <div class="hero-image">
+                                <img src="images/banner-images/xbox.png" alt="Portable X-box 360 console" width="500" height="400">
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-5">
-                        <img src="images/banner-images/xbox.png" class="d-block w-100" alt="...">
-                    </div>                   
-                </div>           
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        </div>
-    </div>
 
-    <div class="container categories">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="d-flex justify-content-between align-items-center c1">
-                    <h1>Watch</h1>
-                    <img src="images/categories/watch.png" alt="">
+                    <!-- Slide Navigation Buttons -->
+                    <button type="button" class="carousel-nav prev" aria-label="Previous slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button type="button" class="carousel-nav next" aria-label="Next slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+
+                    <!-- Story-Style Progress Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" class="indicator" aria-label="Go to slide 1">
+                            <div class="progress-fill"></div>
+                        </button>
+                        <button type="button" class="indicator" aria-label="Go to slide 2">
+                            <div class="progress-fill"></div>
+                        </button>
+                        <button type="button" class="indicator" aria-label="Go to slide 3">
+                            <div class="progress-fill"></div>
+                        </button>
+                    </div>
+
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="d-flex justify-content-between align-items-center c2">
-                    <h1>Bag</h1>
-                    <img src="images/categories/bag.png" alt="">                
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="categories section-padding">
+            <div class="container">
+                <h3 class="section-title animate-reveal" style="--delay: 100ms;">Shop by Category</h3>
+                <div class="grid-3">
+                    <a href="#categories" class="category-card animate-reveal" style="--delay: 150ms;">
+                        <div class="category-content">
+                            <h2 class="category-title">Watch</h2>
+                            <span class="category-link">View Collection &rarr;</span>
+                        </div>
+                        <img src="images/categories/watch.png" alt="Smart Watch Category" class="category-img">
+                        <div class="card-glow"></div>
+                    </a>
+                    <a href="#backpacks" class="category-card animate-reveal" style="--delay: 300ms;">
+                        <div class="category-content">
+                            <h2 class="category-title">Bag</h2>
+                            <span class="category-link">View Collection &rarr;</span>
+                        </div>
+                        <img src="images/categories/bag.png" alt="Bags Category" class="category-img">
+                        <div class="card-glow"></div>
+                    </a>
+                    <a href="#shoes" class="category-card animate-reveal" style="--delay: 450ms;">
+                        <div class="category-content">
+                            <h2 class="category-title">Shoes</h2>
+                            <span class="category-link">View Collection &rarr;</span>
+                        </div>
+                        <img src="images/categories/shoes.png" alt="Shoes Category" class="category-img">
+                        <div class="card-glow"></div>
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="d-flex justify-content-between align-items-center c3">
-                    <h1>Shoes</h1>
-                    <img src="images/categories/shoes.png" alt="">
+        </section>
+
+        <!-- Shoes Section -->
+        <section id="shoes" class="products section-padding bg-alt-section">
+            <div class="container">
+                <div class="section-header animate-reveal" style="--delay: 100ms;">
+                    <h3 class="section-title m-0">Latest Footwear</h3>
+                    <a href="#shoes" class="view-all">View All</a>
+                </div>
+                
+                <div class="grid-3">
+                    <article class="product-card animate-reveal" style="--delay: 150ms;">
+                        <div class="product-img-wrapper product-pad">
+                            <img src="images/shoes/shoe-1.png" alt="Supply minimalist sneakers" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-brand">Supply</span>
+                                <span class="product-price">$120</span>
+                            </div>
+                            <h4 class="product-title">Minimalist Daily</h4>
+                            <p class="product-desc">Clean design meets daily comfort. These are the essential, durable sneakers for reliable style.</p>
+                            <button type="button" class="btn btn-secondary w-full">Quick Add</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card animate-reveal" style="--delay: 300ms;">
+                        <div class="product-img-wrapper product-pad">
+                            <img src="images/shoes/shoe-2.png" alt="Nike performance sneakers" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-brand">Nike</span>
+                                <span class="product-price">$320</span>
+                            </div>
+                            <h4 class="product-title">Air Performance</h4>
+                            <p class="product-desc">Engineered for speed and performance. Experience lightweight support. Just Do It.</p>
+                            <button type="button" class="btn btn-secondary w-full">Quick Add</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card animate-reveal" style="--delay: 450ms;">
+                        <div class="product-img-wrapper product-pad">
+                            <img src="images/shoes/shoe-3.png" alt="Adidas classic sneakers" class="product-img" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-brand">Adidas</span>
+                                <span class="product-price">$400</span>
+                            </div>
+                            <h4 class="product-title">Street Heritage</h4>
+                            <p class="product-desc">Classic heritage reborn for the streets. Blending iconic three-stripe style with modern comfort.</p>
+                            <button type="button" class="btn btn-secondary w-full">Quick Add</button>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="container shoes" id="shoes">
-        <h3>Shoes</h3>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="images/shoes/shoe-1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Supply</h5>
-                        <p class="card-text">Clean design meets daily comfort. These are the essential, durable sneakers for reliable, minimalist style.</p>
-                        <h5>$120</h5>
-                        <button class="buy-now-button">Buy Now >></button>
-                    </div> 
+        <!-- Backpack Section -->
+        <section id="backpacks" class="products section-padding">
+            <div class="container">
+                <div class="section-header animate-reveal" style="--delay: 100ms;">
+                    <h3 class="section-title m-0">Urban Backpacks</h3>
+                    <a href="#backpacks" class="view-all">View All</a>
+                </div>
+                
+                <div class="grid-3">
+                    <article class="product-card animate-reveal" style="--delay: 150ms;">
+                        <div class="product-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1546938576-6e6a64f317cc?auto=format&fit=crop&w=600&q=80" alt="Phoenix red crimson carryall backpack" class="product-img img-cover" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-brand">Phoenix</span>
+                                <span class="product-price">$119</span>
+                            </div>
+                            <h4 class="product-title">Crimson Carryall</h4>
+                            <p class="product-desc">Bold and essential, this red carryall demands attention while keeping your items secure and accessible.</p>
+                            <button type="button" class="btn btn-secondary w-full">Quick Add</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card animate-reveal" style="--delay: 300ms;">
+                        <div class="product-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80" alt="Frosted blue urban backpack" class="product-img img-cover" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-brand">Frosted</span>
+                                <span class="product-price">$299</span>
+                            </div>
+                            <h4 class="product-title">Arctic Explorer</h4>
+                            <p class="product-desc">Stay organized on the move with the cool, versatile blue bag. Perfect for school or urban adventures.</p>
+                            <button type="button" class="btn btn-secondary w-full">Quick Add</button>
+                        </div>
+                    </article>
+                    
+                    <article class="product-card animate-reveal" style="--delay: 450ms;">
+                        <div class="product-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?auto=format&fit=crop&w=600&q=80" alt="Black-box classic leather backpack" class="product-img img-cover" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-meta">
+                                <span class="product-brand">Black-Box</span>
+                                <span class="product-price">$499</span>
+                            </div>
+                            <h4 class="product-title">Executive Classic</h4>
+                            <p class="product-desc">The ultimate classic, this sleek black bag offers professional style and unmatched durability.</p>
+                            <button type="button" class="btn btn-secondary w-full">Quick Add</button>
+                        </div>
+                    </article>
                 </div>
             </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="images/shoes/shoe-2.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Nike</h5>
-                    <p class="card-text">Engineered for speed and performance. Experience lightweight support. Just Do It.</p>
-                    <h5>$320</h5>
-                    <button class="buy-now-button">Buy Now >></button>
+        </section>
+
+        <!-- Subscribe Section -->
+        <section class="subscribe section-padding bg-alt-section">
+            <div class="container">
+                <div class="subscribe-card animate-reveal" style="--delay: 200ms;">
+                    <div class="subscribe-glow"></div>
+                    <div class="subscribe-content">
+                        <h3 class="subscribe-title">Join the <span class="text-gradient">Neo Club</span></h3>
+                        <p class="subscribe-desc">Subscribe to get exclusive access to drops, sales, and premium gear updates.</p>
+                        <!-- Form submits purely using HTML method POST to prevent hashes -->
+                        <form class="subscribe-form" action="/subscribe" method="POST">
+                            <input type="email" class="form-input" placeholder="Enter your email address..." aria-label="Email Address for Newsletter" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
-      
             </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="images/shoes/shoe-3.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Adidas</h5>
-                    <p class="card-text">Classic heritage reborn for the streets. Blending iconic three-stripe style with modern, all-day comfort.</p>
-                    <h5>$400</h5>
-                    <button class="buy-now-button">Buy Now >></button>
-                </div>     
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container" id="backpack">
-    <h3>Backpack</h3>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-            <img src="images/bags/bag-1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Phoenix</h5>
-                <h5>$119</h5>
-                <p class="card-text">Bold and essential, this red carryall demands attention while keeping your items secure and accessible.</p>
-                <button class="buy-now-button">Buy Now >></button>
-            </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-            <img src="images/bags/bag-2.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Frosted</h5>
-                <h5>$299</h5>
-                <p class="card-text">Stay organized on the move with the cool, versatile blue bag. Perfect for school or urban adventures.</p>
-                <button class="buy-now-button">Buy Now >></button>
-            </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-            <img src="images/bags/bag-3.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Black-box</h5>
-                <h5>$499</h5>
-                <p class="card-text">The ultimate classic, this sleek black bag offers professional style and unmatched durability.</p>
-                <button class="buy-now-button">Buy Now >></button>
-            </div>
-            </div>
-    </div>
-    </div>
-</div>
+        </section>
+    </main>
 
-<div class="container d-flex justify-content-center align-items-center orange-bg" id="subscribe">
-    <div>
-        <h3>Let's stay in touch</h3>
-        <h6>Get updates on sales, discounts and more!!!</h6>
-        <input class="form-control" type="text">
-        <button class="buy-now-button">SUBMIT</button>
-    </div>
-</div>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">Neo<span class="text-accent">Commerce</span></span>
+                <p class="footer-tagline">Elevating your lifestyle with premium tech and gear.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="#shoes">Shoes</a>
+                <a href="#backpacks">Backpacks</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <small>&copy; 2026 Neo Commerce. All Rights Reserved.</small>
+        </div>
+    </footer>
 
-<footer>
-    <small>© 2025 Neo Commerce. All Rights Reserved.</small>
-</footer>
+    <!-- Carousel & ScrollSpy Logic Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // --- CAROUSEL LOGIC ---
+            const container = document.getElementById('hero-carousel');
+            if (container) {
+                const track = container.querySelector('.carousel-track');
+                const slides = Array.from(container.querySelectorAll('.hero-slide'));
+                const nextBtn = container.querySelector('.carousel-nav.next');
+                const prevBtn = container.querySelector('.carousel-nav.prev');
+                const indicators = Array.from(container.querySelectorAll('.indicator'));
+                const fills = Array.from(container.querySelectorAll('.progress-fill'));
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+                let currentIndex = 0;
+                const duration = 6000; // 6 seconds per slide
+                let progress = 0;
+                let lastTime = performance.now();
+                let isPaused = false;
+                let isDragging = false;
+                let startX = 0;
+                let currentX = 0;
+
+                function goToSlide(index) {
+                    if (index < 0) index = slides.length - 1;
+                    if (index >= slides.length) index = 0;
+                    
+                    currentIndex = index;
+                    progress = 0; // Reset progress bar
+                    updateTrack();
+                }
+
+                function updateTrack() {
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+
+                // Main Animation Loop for Progress Bar
+                function loop(currentTime) {
+                    const deltaTime = currentTime - lastTime;
+                    lastTime = currentTime;
+
+                    if (!isPaused && !isDragging) {
+                        progress += (deltaTime / duration);
+                        if (progress >= 1) {
+                            goToSlide(currentIndex + 1);
+                        }
+                    }
+
+                    // Smoothly fill the story progress bars
+                    fills.forEach((fill, i) => {
+                        if (i < currentIndex) fill.style.width = '100%';
+                        else if (i === currentIndex) fill.style.width = `${progress * 100}%`;
+                        else fill.style.width = '0%';
+                    });
+
+                    requestAnimationFrame(loop);
+                }
+
+                // Click Navigations
+                nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+                prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+
+                indicators.forEach((ind, i) => {
+                    ind.addEventListener('click', () => goToSlide(i));
+                });
+
+                // Pause on Hover
+                container.addEventListener('mouseenter', () => isPaused = true);
+                container.addEventListener('mouseleave', () => {
+                    isPaused = false;
+                    lastTime = performance.now(); // Prevent jump when resuming
+                });
+
+                // Touch / Mouse Swipe Logic
+                function dragStart(e) {
+                    isDragging = true;
+                    startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+                    currentX = startX;
+                    track.style.transition = 'none'; // Snap to finger
+                }
+
+                function dragMove(e) {
+                    if (!isDragging) return;
+                    currentX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+                    const diffPercent = ((currentX - startX) / container.offsetWidth) * 100;
+                    track.style.transform = `translateX(calc(-${currentIndex * 100}% + ${diffPercent}%))`;
+                }
+
+                function dragEnd() {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    track.style.transition = 'transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)'; // Restore smooth animation
+                    
+                    const diff = currentX - startX;
+                    // If swiped more than 50px, switch slides
+                    if (Math.abs(diff) > 50) {
+                        goToSlide(diff > 0 ? currentIndex - 1 : currentIndex + 1);
+                    } else {
+                        updateTrack(); // Snap back
+                    }
+                }
+
+                track.addEventListener('mousedown', dragStart);
+                track.addEventListener('touchstart', dragStart, {passive: true});
+                
+                window.addEventListener('mousemove', dragMove);
+                window.addEventListener('touchmove', dragMove, {passive: true});
+                
+                window.addEventListener('mouseup', dragEnd);
+                window.addEventListener('touchend', dragEnd);
+
+                // Start loop
+                requestAnimationFrame(loop);
+            }
+
+            // --- SCROLLSPY & NAVIGATION LOGIC ---
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const menuToggle = document.getElementById('menu-toggle');
+
+            // Set up IntersectionObserver to update active links on scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '-85px 0px -60% 0px', // Triggers when section passes header
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const currentId = entry.target.getAttribute('id');
+                        
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${currentId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Close mobile menu when a nav link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if(menuToggle.checked) {
+                        menuToggle.checked = false;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
