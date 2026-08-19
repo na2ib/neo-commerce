@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <!-- Relative CSS Path for GitHub Pages -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <!-- Glassmorphic Header & Navigation -->
@@ -261,7 +262,6 @@
                     <div class="subscribe-content">
                         <h3 class="subscribe-title">Join the <span class="text-gradient">Neo Club</span></h3>
                         <p class="subscribe-desc">Subscribe to get exclusive access to drops, sales, and premium gear updates.</p>
-                        <!-- Form submits purely using HTML method POST to prevent hashes -->
                         <form class="subscribe-form" action="/subscribe" method="POST">
                             <input type="email" class="form-input" placeholder="Enter your email address..." aria-label="Email Address for Newsletter" required>
                             <button type="submit" class="btn btn-primary">Subscribe</button>
@@ -317,7 +317,7 @@
                     if (index >= slides.length) index = 0;
                     
                     currentIndex = index;
-                    progress = 0; // Reset progress bar
+                    progress = 0;
                     updateTrack();
                 }
 
@@ -325,7 +325,6 @@
                     track.style.transform = `translateX(-${currentIndex * 100}%)`;
                 }
 
-                // Main Animation Loop for Progress Bar
                 function loop(currentTime) {
                     const deltaTime = currentTime - lastTime;
                     lastTime = currentTime;
@@ -337,7 +336,6 @@
                         }
                     }
 
-                    // Smoothly fill the story progress bars
                     fills.forEach((fill, i) => {
                         if (i < currentIndex) fill.style.width = '100%';
                         else if (i === currentIndex) fill.style.width = `${progress * 100}%`;
@@ -347,7 +345,6 @@
                     requestAnimationFrame(loop);
                 }
 
-                // Click Navigations
                 nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
                 prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
 
@@ -355,19 +352,17 @@
                     ind.addEventListener('click', () => goToSlide(i));
                 });
 
-                // Pause on Hover
                 container.addEventListener('mouseenter', () => isPaused = true);
                 container.addEventListener('mouseleave', () => {
                     isPaused = false;
-                    lastTime = performance.now(); // Prevent jump when resuming
+                    lastTime = performance.now();
                 });
 
-                // Touch / Mouse Swipe Logic
                 function dragStart(e) {
                     isDragging = true;
                     startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
                     currentX = startX;
-                    track.style.transition = 'none'; // Snap to finger
+                    track.style.transition = 'none';
                 }
 
                 function dragMove(e) {
@@ -380,14 +375,13 @@
                 function dragEnd() {
                     if (!isDragging) return;
                     isDragging = false;
-                    track.style.transition = 'transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)'; // Restore smooth animation
+                    track.style.transition = 'transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)';
                     
                     const diff = currentX - startX;
-                    // If swiped more than 50px, switch slides
                     if (Math.abs(diff) > 50) {
                         goToSlide(diff > 0 ? currentIndex - 1 : currentIndex + 1);
                     } else {
-                        updateTrack(); // Snap back
+                        updateTrack();
                     }
                 }
 
@@ -400,7 +394,6 @@
                 window.addEventListener('mouseup', dragEnd);
                 window.addEventListener('touchend', dragEnd);
 
-                // Start loop
                 requestAnimationFrame(loop);
             }
 
@@ -409,10 +402,9 @@
             const navLinks = document.querySelectorAll('.nav-link');
             const menuToggle = document.getElementById('menu-toggle');
 
-            // Set up IntersectionObserver to update active links on scroll
             const observerOptions = {
                 root: null,
-                rootMargin: '-85px 0px -60% 0px', // Triggers when section passes header
+                rootMargin: '-85px 0px -60% 0px',
                 threshold: 0
             };
 
@@ -435,7 +427,6 @@
                 observer.observe(section);
             });
 
-            // Close mobile menu when a nav link is clicked
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     if(menuToggle.checked) {
